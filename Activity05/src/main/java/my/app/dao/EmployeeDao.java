@@ -30,10 +30,11 @@ public class EmployeeDao {
 	
 	public List<Employee> getAllEmployees(){
 		
-		List<Employee> empList = null;
+		List<Employee> emplist = null;
 		session = HibernateUtil.getSessionFactory().openSession();
-		session.createQuery("FROM Employee",Employee.class).getResultList();
-		return empList;
+		emplist = session.createQuery("FROM Employee").getResultList();
+		
+		return emplist;
 	}
 	
 	public Employee getEmployee(String emp_id) {

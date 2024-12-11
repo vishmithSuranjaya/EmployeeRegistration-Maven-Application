@@ -1,10 +1,16 @@
 <%
 String message = "";
 if (request.getParameter("status") != null) {
-    if (request.getParameter("status").equals("1")) {  // Use double quotes for strings
-        message = "Registration Successful!";
-    } else {
-        message = "Registration Failed!";
+    String status = request.getParameter("status");
+    
+    if(status.equals("1")){
+    	message = "Registration Successfull!";
+    }else if(status.equals("0")){
+    	message = "Error Occured!";
+    }else if(status.equals("2")){
+    	message = "Succesfully Deleted the Employee!";
+    }else if(status.equals("3")){
+    	message = "Error Occured!";
     }
 }
 %>
