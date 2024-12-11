@@ -15,11 +15,34 @@ if (request.getParameter("status") != null) {
 <link rel="stylesheet" type="text/css" href="<%= request.getContextPath() %>/css/styles.css">
 
 <style>
-    
+    .content{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        height: 100vh;
+    }
+    .inner-content{
+        border: 1px solid black;
+        border-radius: 10px;
+        padding: 20px;
+        
+    }
+    form input{
+        border: 1px solid black;
+        background-color: #fff;
+        border-radius: 3px;
+    }
+    form input,label{
+        margin: 5px;
+    }
 </style>
 
 </head>
 <body>
+<div class="content">
+ <div class="inner-content">
+   
 <form action="save-employee">
  <table>
    <tr>
@@ -43,7 +66,10 @@ if (request.getParameter("status") != null) {
    </tr>
  </table>
 </form>
-
 <a href="view-employee">View Employee</a>
+ </div>
+</div>
+
+
 </body>
 </html>
