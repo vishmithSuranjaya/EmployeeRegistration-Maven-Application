@@ -14,14 +14,15 @@ import my.app.dao.EmployeeDao;
 import my.app.entity.Employee;
 
 
-@WebServlet(urlPatterns = {"/save-employee", "/view-employee"})
+@WebServlet("/")
 public class DispatcherServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
   
-    private EmployeeDao empdao = new EmployeeDao(); // Initialize once, not per request
-
+    
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String url_path = request.getServletPath();
+        EmployeeDao empdao = new EmployeeDao();
+        
         if (url_path.equals("/save-employee")) {
             Employee emp = new Employee();
             emp.setEmpid(request.getParameter("empid"));
