@@ -57,6 +57,6 @@ public class EmployeeDao {
 			session.delete(emp);
 			transaction.commit();
 		}
-		return false;
+		return true;
 	}
 }
