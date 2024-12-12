@@ -45,10 +45,10 @@ public class DispatcherServlet extends HttpServlet {
         	}else {
         		response.sendRedirect("index.jsp?status=3");      //employee record deletion not sucessfull.
         	}
-        }else if(url_path.equals("/update-employee")) {
+        }else if(url_path.equals("/update-employee")) {          //directed the page for update the details 
         	String emp_id = request.getParameter("id");
         	Employee emp = empdao.getEmployee(emp_id);
-        	request.setAttribute("employee", emp);
+        	request.setAttribute("emp", emp);
          	getView(request, "updateEmployee").forward(request, response);                            //update employee details
         }
     }
