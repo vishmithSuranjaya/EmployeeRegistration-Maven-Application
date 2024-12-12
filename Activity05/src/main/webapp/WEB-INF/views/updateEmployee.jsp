@@ -92,7 +92,7 @@ h2 {
     <%
         Employee employee = (Employee) request.getAttribute("emp");
     %>
-    <form action="update-employee" method="post">
+    <form action="save-employee" method="post">
         <table>
             <tr>
                 <td>Employee ID</td>
@@ -107,7 +107,7 @@ h2 {
                 <td><input type="text" name="lname" value="<%= employee != null ? employee.getLname() : "" %>" /></td>
             </tr>
         </table>
-        <input type="submit" value="save-employee" />
+        <input type="submit" value="Update Employee" />
     </form>
 </div>
 </body>
