@@ -93,10 +93,32 @@ h2 {
     margin: 0;
     padding: 10px;
 }
+
+.backHome a{
+   text-decoration: none;
+   color: #fff;
+}
+
+.backHome{
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    width: 42px;
+}
+
+.backHome a:hover {
+    background-color: #0056b3;
+}
+
+
 </style>
 </head>
 <body>
     <div class="container">
+        <a href="index.jsp" class="backHome">Home</a>
         <h2>View Employee</h2>
         <table>
             <tr>
@@ -124,5 +146,7 @@ h2 {
             %>
         </table>
     </div>
+    
+    
 </body>
 </html>

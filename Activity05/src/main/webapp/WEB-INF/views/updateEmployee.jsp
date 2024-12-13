@@ -75,9 +75,28 @@ form input[type="submit"] {
 }
 
 form input[type="submit"]:hover {
-    background-color: #45a049;
+    background-color: green;
 }
 
+.update-cancel{
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    float:right;
+    right: 100px;
+    transition: background-color 0.3s ease;
+    margin-left:10px;
+    text-decoration: none;
+    
+}
+.update-cancel:hover{
+    background-color: #cc0000;
+}
 /* Header styling */
 h2 {
     text-align: center;
@@ -107,6 +126,7 @@ h2 {
                 <td><input type="text" name="lname" value="<%= employee != null ? employee.getLname() : "" %>" /></td>
             </tr>
         </table>
+        <a href="view-employee" class="update-cancel">Cancel</a>
         <input type="submit" value="Update Employee" />
     </form>
 </div>

@@ -47,6 +47,20 @@ form input, label {
 	margin: 5px;
 }
 
+.view-employee{
+    background-color: green;
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    width: 50%;
+}
+
+.view-employee a:hover {
+    background-color: dark-green;
+}
+
 .toast {
 	visibility: hidden;
 	min-width: 250px;
@@ -120,7 +134,7 @@ to {
 			</div>
 			<button type="submit" class="btn btn-primary w-100">Register</button>
 		</form>
-<a href="view-employee" id="view-employee">View Employees -></a>
+       <a href="view-employee" class="view-employee">View Employees -></a>
 
 <script>
         // JavaScript function to show toast notification
@@ -134,8 +148,8 @@ to {
             }, 5000);
         }
         
-        var toastMessage = "<%= request.getAttribute("message") %>"; // Fetch the message from the server
-        if (toastMessage) {
+        var toastMessage = "<%= request.getAttribute("message")%>"; // Fetch the message from the server
+        if (toastMessage != "null") {
             document.getElementById("toast").textContent = toastMessage;
             showToast();
         }
